@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>RedMind AI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedMind AI - AI-Powered Code Review</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <canvas id="particles-bg"></canvas>
 
-<div class="container">
-    <h1>🚀 RedMind AI</h1>
-    <p>Think Like a Hacker. Code Like a Pro.</p>
+    <section class="hero">
+        <div class="container">
+            <div class="typewriter-container">
+                <h1 class="glow-text typewriter">RedMind AI &ndash; AI-Powered Code Review</h1>
+            </div>
+            <p>Automated bug detection, performance optimization, and secure code rewriting. Smarter, faster, safer
+                coding for developers.</p>
+            <div class="cta-group">
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <a href="login.html" class="btn btn-secondary">Login</a>
+            </div>
+        </div>
+    </section>
 
-    <textarea id="codeInput" placeholder="Paste your code here..."></textarea>
-
-    <div>
-        <label>
-            <input type="checkbox" id="simulateAttack">
-            Enable Attack Simulation
-        </label>
-    </div>
-
-    <button onclick="analyzeCode()">Analyze Code</button>
-
-    <div id="result"></div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

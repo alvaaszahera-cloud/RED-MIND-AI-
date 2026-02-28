@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - RedMind AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard-wrapper">
+        <header class="dashboard-header container">
+            <h2 class="glow-text">RedMind Terminal</h2>
+            <nav class="nav-links">
+                <span id="user-greeting">Guest</span>
+                <a href="#" id="logout-btn">Log out</a>
+            </nav>
+        </header>
+
+        <main class="container">
+            <div class="analyzer-grid">
+                <!-- Editor Section -->
+                <section class="editor-section glass-card">
+                    <h3>Input Source Code</h3>
+                    <textarea id="code-input" placeholder="// Paste your code here to begin analysis..."></textarea>
+
+                    <div class="controls">
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" id="simulate-attack">
+                            <span>Simulate Attack</span>
+                        </label>
+                        <button class="btn btn-primary" id="analyze-btn">Initialize Scan</button>
+                    </div>
+                </section>
+
+                <!-- Results Section -->
+                <section class="results-section glass-card" id="results-panel">
+                    <h3>Scan Results</h3>
+
+                    <div id="score-card" class="score-card">
+                        <div>
+                            <h4>Risk Score</h4>
+                            <span class="score-value" id="risk-score-val">--</span>
+                        </div>
+                    </div>
+
+                    <div class="result-block">
+                        <h4>Detected Issues</h4>
+                        <ul class="issues-list" id="issues-list">
+                            <li>Run a scan to detect vulnerabilities and performance bottlenecks.</li>
+                        </ul>
+                    </div>
+
+                    <div class="result-block" id="ai-section" style="display: none;">
+                        <h4>AI Optimized Code</h4>
+                        <div class="code-output" id="ai-code"></div>
+
+                        <h4 style="margin-top:15px;">AI Suggestions</h4>
+                        <ul class="issues-list" id="ai-suggestions-list"></ul>
+                    </div>
+
+                    <div class="result-block" id="attack-section" style="display: none;">
+                        <h4>Attack Simulation Simulation</h4>
+                        <div class="code-output attack-log" id="attack-log"></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <div id="toast"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
